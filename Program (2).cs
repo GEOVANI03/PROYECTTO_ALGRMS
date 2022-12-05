@@ -10,7 +10,7 @@ namespace PROYECTO_ALG
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("BIENVENIDO AL PROGRAMA DE ESTRUCTURA DE DATOS");
+            Console.WriteLine("BIENVENIDO AL PROGRAMA");
             int opcion = 0;
             while (opcion != 7)
             {
