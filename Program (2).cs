@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PROYECTO_ALG
 {
@@ -14,7 +11,7 @@ namespace PROYECTO_ALG
             int opcion = 0;
             while (opcion != 7)
             {
-                Console.WriteLine("\n1. Invertir la posicion de los valores de un vector");
+                Console.WriteLine("1. Invertir la posicion de los valores de un vector");
                 Console.WriteLine("2. Averiguar si una lista de numeros esta ordenada de menor a mayor");
                 Console.WriteLine("3. Averiguar si una lista de numeros esta ordenada de manera estrictamente creciente");
                 Console.WriteLine("4. Averiguar si una lista de numeros tiene numeros repetidos");
@@ -37,7 +34,7 @@ namespace PROYECTO_ALG
                             OrdenadoEstricto();
                             break;
                         case 4:
-                            Repetidos();
+                            Repetido();
                             break;
                         case 5:
                             Ordenar();
@@ -93,7 +90,7 @@ namespace PROYECTO_ALG
             {
                 try
                 {
-                    Console.WriteLine("inbtrodusca el tamaño de la lista");
+                    Console.WriteLine("introdusca el tamaño de la lista");
                     int tam = Convert.ToInt32(Console.ReadLine());
                     int[] vector = new int[tam];
                     for (int M = 0;Mi < tam; M++)
@@ -141,7 +138,7 @@ namespace PROYECTO_ALG
                         vector[R] = Convert.ToInt32(Console.ReadLine());
                     }
                     int cont = 0;
-                    for (int R = 0; R < tam - 1; i++)
+                    for (int R = 0; R < tam - 1; R++)
                     {
                         if (vector[R] < vector[R + 1])
                         {
@@ -151,7 +148,7 @@ namespace PROYECTO_ALG
                     Console.WriteLine("La lista de numeros ingresada es: ");
                     for (int R = 0; R < tam; R++)
                     {
-                        Console.Write(vector[i] + " ");
+                        Console.Write(vector[R] + " ");
                     }
                     if (cont == tam - 1)
                     {
@@ -180,11 +177,11 @@ namespace PROYECTO_ALG
                         vector[E] = Convert.ToInt32(Console.ReadLine());
                     }
                     int cont = 0;
-                    for (int E = 0; E < tam - E; i++)
+                    for (int E = 0; E < tam - E; E++)
                     {
-                        for (int G = R + 1; G < tam; G++)
+                        for (int G = E + 1; G < tam; G++)
                         {
-                            if (vector[R] == vector[j])
+                            if (vector[E] == vector[G])
                             {
                                 cont++;
                             }
@@ -197,7 +194,7 @@ namespace PROYECTO_ALG
                     }
                     if (cont > 0)
                     {
-                        Console.WriteLine("\nLa lista tiene numeros repetidos,los cuales son: ");
+                        Console.WriteLine("La lista tiene numeros repetidos,los cuales son: ");
                         for (int R = 0; R < tam - 1; R++)
                         {
                             for (int G = R + 1; G < tam; G++)
@@ -311,13 +308,13 @@ namespace PROYECTO_ALG
                     int suma = 0;
                     for (int R = 0; R < tam; R++)
                     {
-                        suma = suma + vector[i];
+                        suma = suma + vector[R];
                     }
                     int promedio = suma / tam;
                     Console.WriteLine("La lista de numeros ingresada es: ");
                     for (int R = 0; R < tam; R++)
                     {
-                        Console.Write(vector[i] + " ");
+                        Console.Write(vector[R] + " ");
                     }
                     Console.WriteLine("El promedio de los numeros ingresados es: " + promedio);
                 }
